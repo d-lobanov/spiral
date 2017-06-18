@@ -5,4 +5,4 @@ A simple generator of spirals
 1) Open `index.html` in your favourite browser 
 2) Play
 
-![gif](./spiral.gif)
+![gif](images/preview.gif)
