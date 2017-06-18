@@ -3,27 +3,11 @@ function getSpiralCollection(size) {
     let numberOfSquares = Math.ceil(size / 2);
     let counter = 1;
 
-    let add = (position) => {
-        collection.add(position, counter++);
-    };
+    for (let offset = 0; offset < numberOfSquares; offset++) {
+        let sizeOfCurrentSquare = size - offset;
 
-    for (let index = 0; index < numberOfSquares; index++) {
-        let sizeOfCurrentSquare = size - index;
-
-        for (let position of topEdge(index, sizeOfCurrentSquare)) {
-            add(position);
-        }
-
-        for (let position of rightEdge(index, sizeOfCurrentSquare)) {
-            add(position);
-        }
-
-        for (let position of bottomEdge(index, sizeOfCurrentSquare)) {
-            add(position);
-        }
-
-        for (let position of leftEdge(index, sizeOfCurrentSquare)) {
-            add(position);
+        for (let position of edgesOfSquare(sizeOfCurrentSquare, offset)) {
+            collection.add(position, counter++);
         }
     }
 

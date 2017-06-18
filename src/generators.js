@@ -66,3 +66,10 @@ function* leftEdge(startAt, size) {
         yield (new Position(i, startAt));
     }
 }
+
+function* edgesOfSquare(size, offset) {
+    yield * topEdge(offset, size);
+    yield * rightEdge(offset, size);
+    yield * bottomEdge(offset, size);
+    yield * leftEdge(offset, size);
+}
