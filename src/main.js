@@ -27,5 +27,10 @@ function run() {
 }
 
 function showErrorMessage(message) {
-    $('#error-message').fadeIn(500).text(message).delay(2500).fadeOut(1000);
+    let div = $('#error-message');
+    let isMessageShown = div.css('display') !== 'none';
+
+    if (!isMessageShown) {
+        div.fadeIn(500).text(message).delay(3000).fadeOut(1000);
+    }
 }
