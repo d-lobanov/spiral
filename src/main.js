@@ -27,5 +27,5 @@ function run() {
 }
 
 function showErrorMessage(message) {
-    alert(message);
+    $('#error-message').fadeIn(500).text(message).delay(2500).fadeOut(1000);
 }

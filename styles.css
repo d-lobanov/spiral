@@ -3,7 +3,7 @@ body {
 }
 
 form {
-    position: absolute;
+    position: relative;
     top: 60px;
     left: 50%;
     padding: 15px;
@@ -61,4 +61,15 @@ form > label {
     text-align: center;
     padding-top: 130px;
     font-size: .9em;
+}
+
+.error-message {
+    display: none;
+    text-align: center;
+    background-color: rgb(232, 85, 85);
+    color: white;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
 }

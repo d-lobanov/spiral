@@ -13,7 +13,7 @@ class SpiralPrinter {
 
                 element.animate({opacity: 1}, 500);
 
-                setTimeout(function () {
+                setTimeout(() => {
                     element.removeClass('gray-text');
                 }, 700 + 4 * item.value);
             }
