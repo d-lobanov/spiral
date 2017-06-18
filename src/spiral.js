@@ -11,22 +11,32 @@ class SpiralPrinter {
             for (let item of row) {
                 let element = this.addElement(item.position, item.value);
 
-                element.animate({opacity: 1}, 500);
+                if (collection.size <= 25) {
+                    this.animateElement(element, item.value);
+                }
 
-                setTimeout(() => {
-                    element.removeClass('gray-text');
-                }, 700 + 4 * item.value);
+
             }
         }
     }
 
+    animateElement(element, value) {
+        element
+            .addClass("gray-text")
+            .css({opacity: 0})
+            .animate({opacity: 1}, 1500);
+
+        setTimeout(() => {
+            element.removeClass('gray-text');
+        }, 700 + 4 * value);
+    }
+
     addElement(position, value) {
         let row = this.getOrCreateRowIfNotExists(position.row);
-        let element = $("<div>", {class: "element gray-text"});
+        let element = $("<div>", {class: "element"});
 
         element
             .text(value)
-            .css({opacity: 0})
             .appendTo(row);
 
         return element
