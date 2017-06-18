@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spiral</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="" href="spiral.jpg" />
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="src/generators.js"></script>
+    <script type="text/javascript" src="src/spiral.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
+</head>
+<body>
+    <form autocomplete="off" onsubmit="run(); return false;">
+        <label for="number">Your number</label>
+        <input type="text" name="number" id="number" class="number">
+        <button type="button" class="submit" onclick="run()">Go</button>
+    </form>
+
+    <div class="result">
+    </div>
+</body>
+</html>
