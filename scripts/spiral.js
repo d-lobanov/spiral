@@ -14,8 +14,6 @@ class SpiralPrinter {
                 if (collection.size <= 25) {
                     this.animateElement(element, item.value);
                 }
-
-
             }
         }
     }
